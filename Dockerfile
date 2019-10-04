@@ -12,4 +12,4 @@ RUN wget -q -O code-server.tar.gz https://github.com/cdr/code-server/releases/do
     rm -rf code-server.tar.gz
 
 # Install the VS code proxy
-RUN pip install -e.
+RUN pip install -e .

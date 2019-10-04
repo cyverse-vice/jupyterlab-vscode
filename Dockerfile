@@ -11,5 +11,10 @@ RUN wget -q -O code-server.tar.gz https://github.com/cdr/code-server/releases/do
     tar -xvf code-server.tar.gz -C ~/.local/bin --strip-components=1 && \
     rm -rf code-server.tar.gz
 
+RUN pip install numpy && \
+    jupyter labextension install jupyter-server-proxy && \
+    jupyter labextension install jupyterlab-server-proxy && \
+    jupyter lab build
+    
 # Install the VS code proxy
 RUN pip install -e .

@@ -1,5 +1,5 @@
 # Jupyterlab with VS Code
-Build based from https://github.com/betatim/vscode-binder
+Build based from https://github.com/betatim/vscode-binder by Tim Head (Thank you, Tim!)
 
 Updated for use with Docker and CyVerse VICE
 

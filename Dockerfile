@@ -1,11 +1,12 @@
-FROM cyversevice/jupyterlab-base:latest
+FROM cyversevice/jupyterlab-base:1.0.9
 
 # apt
-RUN apt-get install -y openssl net-tools
+USER root
+RUN apt install openssl net-tools -y
 
 # Enable the proxy extension in notebook and lab
-RUN conda update -n conda && \
-    conda install jupyter-server-proxy -c conda-forge && \
+RUN conda update -n base conda && \
+    conda install jupyter-server-proxy -c conda-forge && \    
     jupyter labextension install jupyterlab-server-proxy && \
     jupyter lab build
 
@@ -17,3 +18,6 @@ RUN wget -q -O code-server.tar.gz https://github.com/cdr/code-server/releases/do
 
 # Install the VS code proxy
 RUN pip install .
+
+USER jovyan
+

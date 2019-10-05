@@ -3,8 +3,8 @@ import setuptools
 setuptools.setup(
     name="jupyter-vscode-proxy",
     version='0.1',
-    url="https://github.com/betatim/vscode-binder",
-    author="Tim Head",
+    url="https://github.com/cyverse-vice/jupyterlab-vscode",
+    author="Tyson Lee Swetnam",
     description="Jupyter extension to proxy VS Code",
     packages=setuptools.find_packages(),
 	  keywords=['Jupyter'],

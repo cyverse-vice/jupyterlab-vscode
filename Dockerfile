@@ -1,5 +1,8 @@
 FROM cyversevice/jupyterlab-base:latest
 
+# apt
+RUN apt-get install -y openssl net-tools
+
 # Enable the proxy extension in notebook and lab
 RUN pip install jupyter-server-proxy && \
     jupyter labextension install jupyterlab-server-proxy && \

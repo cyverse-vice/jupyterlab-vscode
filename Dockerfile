@@ -4,7 +4,8 @@ FROM cyversevice/jupyterlab-base:latest
 RUN apt-get install -y openssl net-tools
 
 # Enable the proxy extension in notebook and lab
-RUN pip install jupyter-server-proxy && \
+RUN conda update -n conda && \
+    conda install jupyter-server-proxy -c conda-forge && \
     jupyter labextension install jupyterlab-server-proxy && \
     jupyter lab build
 

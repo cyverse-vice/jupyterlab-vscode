@@ -8,6 +8,6 @@ To test the container locally:
 ```
 docker pull cyversevice/jupyterlab-vscode
 
-docker run -it --rm -v /$HOME:/app --workdir /app -p 8888:8888 -e REDIRECT_URL=http://localhost:8888 cyversevice/jupyterlab-vscode:latest
+docker run -it --rm -v $PWD:/app --workdir /app -p 8888:8888 -e REDIRECT_URL=http://localhost:8888 cyversevice/jupyterlab-vscode:latest
 ```
 Open the container locally or on your VM with the appropriate IP instead of `localhost`

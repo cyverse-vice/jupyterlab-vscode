@@ -1,5 +1,4 @@
-# VS Code on Binder
+# Jupyterlab with VS Code
+Build based from https://github.com/betatim/vscode-binder
 
-VS Code on Binder, because sometimes you need a real editor.
-
-Try it: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/betatim/vscode-binder/master?urlpath=lab)
+Updated for use with Docker and CyVerse VICE
